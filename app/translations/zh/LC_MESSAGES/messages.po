@@ -1,0 +1,81 @@
+# Chinese translations for PROJECT.
+# Copyright (C) 2021 ORGANIZATION
+# This file is distributed under the same license as the PROJECT project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2021.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2021-09-18 17:40+0800\n"
+"PO-Revision-Date: 2021-09-18 17:43+0800\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: zh\n"
+"Language-Team: zh <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.1\n"
+
+#: app/__init__.py:19
+msgid "Please log in to access this page."
+msgstr "接入此页请先登录"
+
+#: app/forms.py:9
+msgid "Username"
+msgstr "用户名"
+
+#: app/forms.py:10
+msgid "Password"
+msgstr "密码"
+
+#: app/forms.py:11
+msgid "Remember Me"
+msgstr "记住密码"
+
+#: app/forms.py:12
+msgid "Sign In"
+msgstr "登录"
+
+#: app/routes.py:31
+msgid "Your post is now live!"
+msgstr ""
+
+#: app/routes.py:49
+msgid "Invalid username or password"
+msgstr ""
+
+#: app/routes.py:85
+msgid "Congratulations, you are now a registered user!"
+msgstr ""
+
+#: app/routes.py:99
+msgid "Check your email for the instructions to reset your password"
+msgstr ""
+
+#: app/routes.py:115
+msgid "Your password has been reset."
+msgstr ""
+
+#: app/routes.py:140
+msgid "Your changes have been saved."
+msgstr ""
+
+#: app/routes.py:156
+msgid "You cannot follow yourself!"
+msgstr ""
+
+#: app/routes.py:172
+msgid "You cannot unfollow yourself!"
+msgstr ""
+
+#: app/templates/404.html:4
+msgid "File Not Found"
+msgstr ""
+
+#: app/templates/_post.html:18
+#, python-format
+msgid "%(username)s said %(when)s"
+msgstr ""
+
