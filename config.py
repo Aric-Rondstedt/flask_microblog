@@ -1,7 +1,4 @@
 import os
-
-basedir = os.path.abspath(os.path.dirname(__file__))  # 获取当前.py文件的绝对路径
-
 from dotenv import load_dotenv
 
 basedir = os.path.abspath(os.path.dirname(__file__))
@@ -25,3 +22,5 @@ class Config:
     MAIL_PASSWORD = os.environ.get('MAIL_PASSWORD')#客户端授权密码
 
     LANGUAGES = ['en', 'zh']
+    APPID = os.environ.get('APPID')
+    BD_TRANSLATOR_KEY = os.environ.get('BD_TRANSLATOR_KEY')
