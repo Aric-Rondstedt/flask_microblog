@@ -1,7 +1,8 @@
 from flask_wtf import FlaskForm
-from wtforms import StringField, TextAreaField, SubmitField
+from flask_ckeditor import CKEditorField
+from wtforms import StringField, TextAreaField, SubmitField, SelectField
 from wtforms.validators import ValidationError, DataRequired, Length
-from app.models import User
+from app.models import User, Category
 
 
 class EditProfileForm(FlaskForm):
@@ -21,5 +22,12 @@ class EditProfileForm(FlaskForm):
 
 
 class PostForm(FlaskForm):
-    post = TextAreaField('Say something', validators=[DataRequired(), Length(min=1, max=140)])
+    title = StringField('Title', validators=[DataRequired(), Length(1, 60)])
+    category = SelectField('Category', coerce=int, default=1)
+    body = CKEditorField('Body', validators=[DataRequired()])
     submit = SubmitField('Submit')
+
+    def __init__(self, *args, **kwargs):
+        super(PostForm, self).__init__(*args, **kwargs)
+        self.category.choices = [(category.id, category.name)
+            for category in Category.query.order_by(Category.name).all()]

@@ -1,4 +1,4 @@
-2021-09-25 20:14:13,388 ERROR: Exception on /user/zhushiwei [GET] [in C:\Users\¼ÅÄ¯ºî\AppData\Local\Programs\Python\Python38\lib\site-packages\flask\app.py:1454]
+2021-09-25 20:15:14,048 ERROR: Exception on /user/zhushiwei [GET] [in C:\Users\¼ÅÄ¯ºî\AppData\Local\Programs\Python\Python38\lib\site-packages\flask\app.py:1454]
 Traceback (most recent call last):
   File "C:\Users\¼ÅÄ¯ºî\AppData\Local\Programs\Python\Python38\lib\site-packages\flask\app.py", line 2070, in wsgi_app
     response = self.full_dispatch_request()
@@ -10,8 +10,8 @@ Traceback (most recent call last):
     return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
   File "C:\Users\¼ÅÄ¯ºî\AppData\Local\Programs\Python\Python38\lib\site-packages\flask_login\utils.py", line 272, in decorated_view
     return func(*args, **kwargs)
-  File "C:\Users\¼ÅÄ¯ºî\microblog\app\main\routes.py", line 77, in user
-    form = EditProfileForm()
+  File "C:\Users\¼ÅÄ¯ºî\microblog\app\main\routes.py", line 71, in user
+    return render_template('user.html', user=user, posts=posts.items, next_url=next_url, prev_url=prev_url)
   File "C:\Users\¼ÅÄ¯ºî\AppData\Local\Programs\Python\Python38\lib\site-packages\flask\templating.py", line 147, in render_template
     return _render(
   File "C:\Users\¼ÅÄ¯ºî\AppData\Local\Programs\Python\Python38\lib\site-packages\flask\templating.py", line 128, in _render
@@ -45,7 +45,8 @@ Traceback (most recent call last):
   File "C:\Users\¼ÅÄ¯ºî\AppData\Local\Programs\Python\Python38\lib\site-packages\werkzeug\routing.py", line 2305, in build
     raise BuildError(endpoint, values, method, self)
 werkzeug.routing.BuildError: Could not build url for endpoint 'user' with values ['username']. Did you mean 'main.user' instead?
-2021-09-25 20:14:16,698 ERROR: Exception on /explore [GET] [in C:\Users\¼ÅÄ¯ºî\AppData\Local\Programs\Python\Python38\lib\site-packages\flask\app.py:1454]
+2021-09-25 20:18:17,862 INFO: Microblog startup [in C:\Users\¼ÅÄ¯ºî\microblog\app\__init__.py:57]
+2021-09-25 20:18:21,671 ERROR: Exception on /user/zhushiwei [GET] [in C:\Users\¼ÅÄ¯ºî\AppData\Local\Programs\Python\Python38\lib\site-packages\flask\app.py:1454]
 Traceback (most recent call last):
   File "C:\Users\¼ÅÄ¯ºî\AppData\Local\Programs\Python\Python38\lib\site-packages\flask\app.py", line 2070, in wsgi_app
     response = self.full_dispatch_request()
@@ -57,8 +58,8 @@ Traceback (most recent call last):
     return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
   File "C:\Users\¼ÅÄ¯ºî\AppData\Local\Programs\Python\Python38\lib\site-packages\flask_login\utils.py", line 272, in decorated_view
     return func(*args, **kwargs)
-  File "C:\Users\¼ÅÄ¯ºî\microblog\app\main\routes.py", line 64, in explore
-    @login_required
+  File "C:\Users\¼ÅÄ¯ºî\microblog\app\main\routes.py", line 72, in user
+    return render_template('user.html', user=user, posts=posts.items, next_url=next_url, prev_url=prev_url)
   File "C:\Users\¼ÅÄ¯ºî\AppData\Local\Programs\Python\Python38\lib\site-packages\flask\templating.py", line 147, in render_template
     return _render(
   File "C:\Users\¼ÅÄ¯ºî\AppData\Local\Programs\Python\Python38\lib\site-packages\flask\templating.py", line 128, in _render
@@ -67,8 +68,8 @@ Traceback (most recent call last):
     self.environment.handle_exception()
   File "C:\Users\¼ÅÄ¯ºî\AppData\Local\Programs\Python\Python38\lib\site-packages\jinja2\environment.py", line 925, in handle_exception
     raise rewrite_traceback_stack(source=source)
-  File "C:\Users\¼ÅÄ¯ºî\microblog\app\templates\index.html", line 2, in top-level template code
-    {% import 'bootstrap/wtf.html' as wtf %}
+  File "C:\Users\¼ÅÄ¯ºî\microblog\app\templates\user.html", line 1, in top-level template code
+    {% extends "base.html" %}
   File "C:\Users\¼ÅÄ¯ºî\microblog\app\templates\base.html", line 1, in top-level template code
     {% extends "bootstrap/base.html" %}
   File "C:\Users\¼ÅÄ¯ºî\AppData\Local\Programs\Python\Python38\lib\site-packages\flask_bootstrap\templates\bootstrap\base.html", line 1, in top-level template code
@@ -81,7 +82,7 @@ Traceback (most recent call last):
     {% block content -%}
   File "C:\Users\¼ÅÄ¯ºî\microblog\app\templates\base.html", line 75, in block 'content'
     {% block app_content %}{% endblock %}
-  File "C:\Users\¼ÅÄ¯ºî\microblog\app\templates\index.html", line 12, in block 'app_content'
+  File "C:\Users\¼ÅÄ¯ºî\microblog\app\templates\user.html", line 37, in block 'app_content'
     {% include '_post.html' %}
   File "C:\Users\¼ÅÄ¯ºî\microblog\app\templates\_post.html", line 9, in top-level template code
     <!--            <a href="{{ url_for('user', username=post.author.username) }}">-->
@@ -92,4 +93,4 @@ Traceback (most recent call last):
   File "C:\Users\¼ÅÄ¯ºî\AppData\Local\Programs\Python\Python38\lib\site-packages\werkzeug\routing.py", line 2305, in build
     raise BuildError(endpoint, values, method, self)
 werkzeug.routing.BuildError: Could not build url for endpoint 'user' with values ['username']. Did you mean 'main.user' instead?
-2021-09-25 20:15:09,595 INFO: Microblog startup [in C:\Users\¼ÅÄ¯ºî\microblog\app\__init__.py:57]
+2021-09-25 20:18:36,599 INFO: Microblog startup [in C:\Users\¼ÅÄ¯ºî\microblog\app\__init__.py:57]

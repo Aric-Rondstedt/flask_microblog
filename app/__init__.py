@@ -23,7 +23,7 @@ moment = Moment()
 babel = Babel()
 
 
-def create_app(config_class=Config):
+def create_app(config_class):
     app = Flask(__name__)
     app.config.from_object(config_class)
 
@@ -60,7 +60,6 @@ def create_app(config_class=Config):
 
 @babel.localeselector
 def get_locale():
-    print(request.accept_languages.best_match(current_app.config['LANGUAGES']))
     return request.accept_languages.best_match(current_app.config['LANGUAGES'])
 
 
